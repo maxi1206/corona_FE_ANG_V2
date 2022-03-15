@@ -1,0 +1,37 @@
+<div class="wrapper">
+    <form
+      [formGroup]="form"
+      style="width: 50%"
+      (ngSubmit)="onSubmit()">
+        <mat-form-field
+          class="example-full-width"
+          appearance="fill">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              placeholder="Email"
+              formControlName="emailControl">
+        </mat-form-field>
+        <mat-form-field
+          class="example-full-width"
+          appearance="fill">
+            <mat-label>Passwort</mat-label>
+            <input
+              matInput
+              placeholder="Passwort"
+              formControlName="passwordControl"
+              type="password">
+        </mat-form-field>
+        <div class="button-wrapper">
+            <button
+              mat-button
+              color="primary"
+              type="submit">Login
+            </button>
+            <button
+              mat-button
+              color="primary">Registrieren
+            </button>
+        </div>
+    </form>
+</div>
