@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <h1 style="margin-top: 50px">Herzlich Wilkommen!</h1>
+    <h2>Was möchten sie tun?</h2>
+    <button
+      mat-button
+      (click)="router.navigateByUrl('/personal')"
+      color="primary">Persönliche Angaben verwalten
+    </button>
+    <button
+      mat-button
+      (click)="router.navigateByUrl('/account')"
+      color="primary">Impftermin Buchen
+    </button>
+    <button
+      mat-button
+      color="primary">Impfterminübersicht
+    </button>
+    <button
+      mat-button
+      color="primary">Nebenwirkungen eintragen
+    </button>
+    <button
+      mat-button
+      color="primary">Ausloggen
+    </button>
+</div>

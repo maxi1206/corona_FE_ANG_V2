@@ -1,0 +1,43 @@
+<div class="wrapper">
+    <div class="items">
+        <div>
+            <form [formGroup]="form">
+                <mat-form-field
+                  class="example-full-width"
+                  appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input
+                      matInput
+                      [matDatepicker]="picker"
+                      (dateInput)="dateEvent($event)"
+                      (dateChange)="dateEvent($event)"
+                      formControlName="dateControl">
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <button
+                  mat-raised-button
+                  (click)="picker.open()">Open
+                </button>
+
+            </form>
+        </div>
+    </div>
+    <div class="items">
+        <ng-container *ngIf="appointments.length > 0">
+            <ng-container *ngFor="let appointment of appointments">
+                <mat-expansion-panel style="margin: 10px">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            {{appointment['date']}}
+                        </mat-panel-title>
+                        <mat-panel-description>
+
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p>{{appointment['location']}}</p>
+                </mat-expansion-panel>
+            </ng-container>
+        </ng-container>
+    </div>
+
+</div>
